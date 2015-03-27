@@ -1,0 +1,26 @@
+<form class="form-horizontal" ng-submit="saveClassStudents()" ng-controller="pickStudentsController">
+  <legend  class="head">Pick Students</legend>
+  <fieldset><!-- Multiple Checkboxes -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <div ng-repeat="innerList in pickStudentsAll">
+          <div class="action-checkbox" ng-repeat="stud in innerList">
+<input id="{{stud.studentNumber}}" type="checkbox" value="{{stud.studentNumber}}" ng-checked="selection.indexOf(stud.studentNumber) > -1" ng-click="toggleSelection(stud.studentNumber)" ng-init="toggleSelection(stud.studentNumber)" />
+<label for="{{stud.studentNumber}}" class="cursorLabel">{{stud.firstname}} {{stud.lastname}}</label>
+          </div>
+	      </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-10 control-label" for="save_class"></label>
+    <div class="col-md-10 col-md-offset-1">
+        <input type="submit" id="save_class" name="save_class" class="btn btn-success btn-lg btn-block" value="Save" />
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+
+

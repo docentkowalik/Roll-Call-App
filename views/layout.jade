@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='description', content='')
+    meta(name='author', content='')     
+    meta(name='', content='')
+    meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1.0')
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/animations.css')
+
+    link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css", rel="stylesheet")
+    link(href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css", rel="stylesheet")
+  body(data-ng-app="rollcall")
+    block content
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js")
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.min.js')
+    <script src="https://code.angularjs.org/1.3.9/angular-animate.js"></script>
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.tpl.min.js')
+    script(src="https://code.angularjs.org/1.3.9/angular-route.min.js")
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src="app/app.js")
+    script(src="app/services/mainFactory.js")
+    script(src="app/services/appValues.js")
+    script(src="app/controllers/mainController.js")
+    script(src="app/controllers/rollCallController.js")
+    script(src="app/controllers/pickStudentsController.js")
+    script(src="app/controllers/loginCtrl.js")
+    script(src="app/services/loginFactory.js")
+    script(src="app/controllers/studentController.js")

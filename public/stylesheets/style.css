@@ -1,0 +1,229 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none !important;
+}
+
+.textDeco{
+	text-decoration: none !important;
+	color: white;
+  	font-size: 20px;
+      line-height: 1.5;
+}
+
+a:link {
+    text-decoration: none !important;
+}
+
+a:visited {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+a:active {
+    text-decoration: none !important;
+}
+
+.msg{
+	font-weight: bold;
+	font-size: 12px;
+  	padding: 5px;
+}
+
+#pHead{
+	background-color: rgb(7, 88, 213);
+	cursor: pointer;
+  height: 70px;
+  padding: 20px 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  background: #62b1d0;
+  border: 0;
+  border-bottom: 3px solid #9FE8EF;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -3px #9FE8EF;
+  box-shadow: inset 0 -3px #9FE8EF;
+}
+
+legend{
+	font-size: 18px !important;
+	border-bottom: 2px solid #e5e5e5 !important;
+}
+
+input[type="checkbox"]{
+  width: 30px; /*Desired width*/
+  height: 15px; /*Desired height*/
+  cursor: pointer;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 5px !important;
+}
+
+ #class_recurring{
+  margin-left: -20px;
+  position: static !important;
+ }
+
+ .ex {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.5 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: red !important;
+  color: white !important;
+}
+
+.validation{
+  /* margin: 10px; */
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: rgb(255, 39, 39);
+}
+
+.btn-danger {
+  border-color: white !important;
+}
+
+.margGlyph{
+  margin-right: 5px;
+}
+
+.cursorLabel{
+  cursor: pointer;
+}
+
+/* Blue Flat Button
+==================================================*/
+.menu{
+  position: relative;
+  vertical-align: center;
+  margin: 0px;
+  height: 100px;
+  padding: 20px 20px;
+  font-size: 4px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  background: #62b1d0;
+  border: 0;
+  border-bottom: 3px solid #9FE8EF;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -3px #9FE8EF;
+  box-shadow: inset 0 -3px #9FE8EF;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.menu:active, #pHead:active {
+  top: 2px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.menu:hover, #pHead:hover {
+  background: #45E1E8;
+  color: #2888AE !important;
+}
+
+.fltfa{
+  float: left;
+  margin-left: 10px;
+  line-height: 1.5 !important;
+}
+
+.menuTXT{
+  line-height: 3;
+  font-size: 30px;
+}
+
+.head{
+    color: #62b1d0;
+}
+
+@media screen and (max-width: 450px) {
+  .menuTXT{
+  line-height: 4;
+  font-size: 20px;
+  }
+  .fltfa{
+  float: left;
+  margin-left: 10px;
+  font-size: 10px;
+  }
+ 
+}
+
+.list-group-item {
+  border: 3px solid #62B1D0 !important;
+  }
+
+  .txtList{
+    font-size: 16px;
+  }
+
+  .radio {
+  display: inline !important;
+  margin-right: 35px !important;
+}
+
+.controls{
+  margin-left: 35px;
+}
+.progs{
+  margin-left: 50px;
+}
+#labelProg{
+  margin-left: 30px;
+}
+
+#labelYear{
+  margin-left: 15px;
+}
+
+/* Blue Flat Button
+==================================================*/
+.btn-sm{
+  position: relative;
+  vertical-align: center;
+  margin: 0px;
+  height: 100x;
+  padding: 20px 20px;
+  font-size: 4px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  background: #62b1d0;
+  border: 0;
+  border-bottom: 3px solid #9FE8EF;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -3px #9FE8EF;
+  box-shadow: inset 0 -3px #9FE8EF;
+}
+
+.btn-sm:active {
+  top: 2px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-sm:hover {
+  background: #45E1E8;
+}

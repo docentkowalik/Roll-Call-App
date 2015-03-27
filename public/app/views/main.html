@@ -1,0 +1,106 @@
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="module in moduleClass | filter:days">
+    <a href="#/rollcall/roll/{{module._id}}" >
+    	 <span class="txtList">{{module.class_name}} &emsp; <span class="glyphicon glyphicon-time margGlyph"></span>
+       {{module.class_startTime}} - {{module.class_endTime}}</span>
+   	</a>
+    &emsp;<button class="btn btn-danger btn-xs" ng-click="deleteClass(module._id)">Remove</button>
+  </li>
+</ul>
+
+<br/>
+
+<div class="panel-group" ng-model="panels.activePanel" bs-collapse>
+  <div class="panel panel-default" ng-repeat="panel in panels">
+    <div class="panel-heading" bs-collapse-toggle id="pHead">
+      <h4 class="panel-title">
+        <a><center class="textDeco">
+          Create Class
+        </center></a>
+      </h4>
+    </div>
+    <div class="panel-collapse" bs-collapse-target>
+      <div class="panel-body">
+        <form class="form-horizontal" ng-submit="addClass()" ng-controller="mainController">
+          <fieldset>
+          <br/>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="programmes"></label>
+            <div class="col-md-4">
+              <div ng-repeat="prog in progs">
+            <div class="action-checkbox">
+<label><input id="checkboxStyle" type="checkbox" value="{{prog.val}}" ng-checked="selection.indexOf(prog.val) > -1" ng-click="toggleSelection(prog.val)" />
+ {{prog.label}}</label>
+            </div>
+          </div>
+      </div>
+    </div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="class_year">Class Year *</label>
+  <div class="col-md-4">
+    <select ng-options="year for year in [1, 2, 3, 4]" ng-model="class_year">
+      <option value="" selected>--Please select year--</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="class_name">Class Name *</label>  
+  <div class="col-md-4">
+    <input id="class_name" type="text" placeholder="" class="form-control input-md" ng-model="class_name" required>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="class_start">Class Start Time *</label>
+  <div class="col-md-2">
+    <select ng-options="time for time in classTimeStart" ng-model="class_start">
+      <option value="" selected>--Please select class time--</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="class_duration">Class Duration *</label>
+  <div class="col-md-2">
+    <select ng-options="dur for dur in [1, 2, 3, 4, 5]" ng-model="class_duration">
+      <option value="" selected>--Please select class duration--</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="class_recurring">Recurring Class? <small>(optional)</small></label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="class_recurring">
+      <input type="checkbox" id="class_recurring" value="" ng-model="class_recurring">
+    </label>
+  </div>
+</div>
+<br/>
+<div class="form-group">
+  <label class="col-md-12 control-label" for="save_class"></label>
+  <div class="col-md-6 col-md-offset-3">
+      <span class="validation">{{validationMSG}}</span>
+    <button id="save_class" name="save_class" class="btn btn-success btn-lg btn-block">Create Class</button>
+  </div>
+</div>
+</fieldset>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<hr/>
+<br/>
+           
+<div class="container">
+    <div class="row">
+        <div class="btn-group-horizontal" role="group" aria-label="Default button group">
+            <a href="#/">
+              <button type="button" class="btn btn-lg btn-block menu"><i class="fa fa-home fa-3x fltfa" ></i><span class="menuTXT">Home</span></button><br/>
+            </a>
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+<form class="form-horizontal" ng-submit="takeRollCall()" ng-controller="rollCallController">
+  <fieldset>
+  <legend  class="head">Take Attendance</legend>
+
+  <div class="form-group">
+    <label class="col-md-12 control-label"></label>
+    <div class="col-md-6 col-md-offset-5">
+      <div ng-repeat="stud in classStudents">
+        <div class="action-checkbox">
+<input id="{{stud[0].students[0].studentNumber}}" type="checkbox" value="{{stud[0].students[0].studentNumber}}" ng-checked="selection.indexOf(stud[0].students[0].studentNumber) > -1" ng-init="toggleSelection(stud[0].students[0].studentNumber)" ng-click="toggleSelection(stud[0].students[0].studentNumber)" />
+<label for="{{stud[0].students[0].studentNumber}}">{{stud[0].students[0].firstname}} {{stud[0].students[0].lastname}}</label>
+        </div>
+	    </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-10 control-label" for="save_class"></label>
+    <div class="col-md-10 col-md-offset-1">
+      <input type="submit" id="save_class" name="save_class" class="btn btn-success btn-lg btn-block" value="Done" />
+    </div>
+  </div>
+  </fieldset>
+</form>

@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <form role="form" class="form-horizontal">
+        <legend  class="head">Add a Student</legend>
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                     <div class="form-group">
+                      <label class="control-label" id="labelProg" for="radios">Program</label>
+                      <div class="progs">
+                        <label class="radio" for="radios-0">
+                          <input type="radio" name="radios" id="radios-0" value="Creative Multimedia" ng-model="student.prog" checked="checked">
+                          Creative Multimedia
+                        </label>
+                        <label class="radio" for="radios-1">
+                          <input type="radio" name="radios" id="radios-1" ng-model="student.prog" value="Digital Animation Production">
+                          Digital Animation Production
+                        </label>
+                      </div>
+                </div>
+                <!-- Multiple Radios (inline) -->
+                    <div class="control-group">
+                      <label class="control-label" id="labelYear" for="year">Year</label>
+                      <div class="controls">
+                        <label class="radio inline" for="year-0">
+                          <input type="radio" class="radio" name="year" id="year-0" value="1" ng-model="student.yr" checked="checked">
+                          1
+                        </label>
+                        <label class="radio inline" for="year-1">
+                          <input type="radio"  class="radio" name="year" id="year-1" ng-model="student.yr" value="2">
+                          2
+                        </label>
+                        <label class="radio inline" for="year-2">
+                          <input type="radio"  class="radio" name="year" id="year-2" ng-model="student.yr" value="3">
+                          3
+                        </label>
+                        <label class="radio inline" for="year-3">
+                          <input type="radio"  class="radio" name="year" id="year-3" ng-model="student.yr" value="4">
+                          4
+                        </label>
+                      </div>
+                    </div>
+                    <br/>
+                    <label for="InputName">Student Firstname</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" ng-model="student.firstname" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Student Lastname</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" ng-model="student.lastname" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Student Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" ng-model="student.studentNumber" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                      <span class="validation">{{validationMSG}}</span>
+
+                <input type="submit" name="submit" id="submit" value="Submit" ng-click="addStudent(student)" class="btn btn-info btn-lg btn-block">
+            </div>
+        </form>
+    </div>
+</div>
+<br/>
+<hr/>
+<br/>
+                    
+
+<div class="container">
+        <div class="row">
+        <div class="btn-group-horizontal" role="group" aria-label="Default button group">
+            <a href="#/attendance">
+                <button type="button" class="btn btn-lg btn-block menu"><i class="fa fa-check-square-o fa-3x fltfa" ></i><span class="menuTXT">Take Attendance</span></button><br/>
+            </a>
+          <a href="#/">
+              <button type="button" class="btn btn-lg btn-block menu"><i class="fa fa-home fa-3x fltfa" ></i><span class="menuTXT">Home</span></button><br/>
+            </a>
+        </div>
+    </div>
+    </div>
